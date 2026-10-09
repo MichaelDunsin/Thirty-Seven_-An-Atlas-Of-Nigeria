@@ -1,0 +1,1031 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Thirty-Seven: An Atlas of Nigeria</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#F5EFE3">
+<meta name="description" content="An atlas of Nigeria's 36 states and the Federal Capital Territory, drawn from the land up. Every state has its own page, with sources.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Thirty-Seven: An Atlas of Nigeria">
+<meta property="og:description" content="An atlas of Nigeria's 36 states and the Federal Capital Territory, drawn from the land up. Every state has its own page, with sources.">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Thirty-Seven, An Atlas of Nigeria: a map of Nigeria's states coloured by geopolitical zone.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Thirty-Seven: An Atlas of Nigeria">
+<meta name="twitter:description" content="An atlas of Nigeria's 36 states and the Federal Capital Territory, drawn from the land up.">
+<meta name="twitter:image" content="og-image.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: an atlas plate. The title block, search and legend sit in a narrow margin column; the map plate takes the rest.
+   State pages are a zone-tinted title band over a ruled editorial page with a label column. Single look by choice: printed paper. */
+:root {
+  color-scheme: light;
+  --laterite: #B5462C; --laterite-deep: #9C3A23; --savanna: #D9A441; --ochre: #B27A22;
+  --indigo: #24305E; --palm: #2F5D3A; --river: #3E7C8C; --river-deep: #2F6473;
+  --paper: #F5EFE3; --paper-deep: #EBE2D0; --ink: #1A1714; --ink-muted: #5A5148; --rule: #8F8371;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-data: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --s1: 4px; --s2: 8px; --s3: 16px; --s4: 24px; --s5: 40px; --s6: 64px; --s7: 96px;
+  --gutter: 16px;
+  --shadow-sheet: 0 1px 0 rgba(26,23,20,.16), 0 16px 40px rgba(26,23,20,.14);
+}
+@media (min-width: 900px) { :root { --gutter: 40px; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 18px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body::before { content: ""; position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: .5; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .22 0 0 0 .16 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E"); }
+a { color: var(--laterite-deep); text-underline-offset: 3px; }
+a:hover { color: var(--ink); }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+h1, h2, h3, p, dl, dd, ul, ol, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+button, input, select { font: inherit; color: inherit; }
+img { display: block; }
+.wrap { padding-inline: var(--gutter); max-width: 1320px; margin-inline: auto; }
+.anno { font-family: var(--font-data); font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; line-height: 1.4; color: var(--ink-muted); }
+.skip { position: absolute; left: var(--gutter); top: -60px; background: var(--ink); color: var(--paper); padding: 8px 12px; z-index: 60; }
+.skip:focus { top: 8px; color: var(--paper); }
+
+/* masthead: sticky; --mast-h is kept in sync by script so anchors and sticky section heads clear it */
+.site-head { position: sticky; top: 0; z-index: 30; background: var(--paper); }
+html { scroll-padding-top: var(--mast-h, 0px); }
+.mast { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--s2) var(--s4); padding-block: var(--s3); border-bottom: 1px solid var(--rule); }
+.mast-name { font-family: var(--font-display); font-weight: 600; font-size: 20px; color: var(--ink); text-decoration: none; letter-spacing: -.01em; }
+.mast-name span { font-style: italic; font-weight: 400; color: var(--ink-muted); }
+.mast nav { display: flex; flex-wrap: wrap; gap: var(--s3); }
+.mast nav a { font-family: var(--font-data); font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); text-decoration: none; padding-block: 6px; border-bottom: 2px solid transparent; }
+.mast nav a:hover, .mast nav a[aria-current="page"] { border-bottom-color: var(--laterite); }
+
+#view { min-height: 60vh; }
+.enter { animation: enter .35s ease-out both; }
+@keyframes enter { from { opacity: .0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.leaving { opacity: 0; transition: opacity .25s ease-in; }
+
+/* ---------- home ---------- */
+.hero { display: grid; gap: var(--s4); padding-block: var(--s4) var(--s5); }
+.hero .plate { order: 2; } .hero-ctl { order: 3; }
+.hero-text, .hero-ctl { display: grid; gap: var(--s3); align-content: start; min-width: 0; }
+.hero h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(56px, 15vw, 108px); line-height: .92; letter-spacing: -.025em; font-variation-settings: "opsz" 144; }
+.hero .sub { font-family: var(--font-display); font-style: italic; font-size: clamp(22px, 5vw, 30px); line-height: 1.2; color: var(--laterite-deep); }
+.hero .lede { max-width: 38ch; color: var(--ink); }
+@media (max-width: 999px) { .hero .lede { font-size: 17px; line-height: 1.5; } }
+@media (min-width: 1000px) {
+  .hero { grid-template-columns: minmax(300px, 380px) minmax(0, 1fr); grid-template-rows: auto 1fr; gap: var(--s4) var(--s5); align-items: start; }
+  .hero .plate { grid-column: 2; grid-row: 1 / span 2; }
+  .hero-ctl { grid-column: 1; grid-row: 2; }
+  .hero h1 { font-size: clamp(72px, 7.4vw, 112px); }
+}
+.field { display: grid; gap: 6px; position: relative; }
+.field label, .group-label { font-family: var(--font-data); font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); }
+.input { width: 100%; min-height: 44px; padding: 8px 12px; background: var(--paper); border: 1px solid var(--ink); border-radius: 2px; font-size: 17px; }
+.input::placeholder { color: var(--ink-muted); }
+.suggest { position: absolute; top: 100%; left: 0; right: 0; z-index: 20; background: var(--paper); border: 1px solid var(--ink); border-top: 0; box-shadow: var(--shadow-sheet); max-height: 300px; overflow: auto; }
+.suggest li { display: flex; justify-content: space-between; gap: var(--s3); padding: 8px 12px; cursor: pointer; font-size: 16px; }
+.suggest li span { font-family: var(--font-data); font-size: 12px; color: var(--ink-muted); align-self: center; text-align: right; }
+.suggest li[aria-selected="true"], .suggest li:hover { background: var(--paper-deep); }
+.seg { display: flex; flex-wrap: wrap; gap: 6px; }
+.btn { min-height: 40px; padding: 6px 12px; background: transparent; border: 1px solid var(--ink); border-radius: 2px; cursor: pointer; font-family: var(--font-data); font-size: 12px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+.btn:hover { background: var(--paper-deep); color: var(--ink); }
+.btn[aria-pressed="true"], .btn[aria-checked="true"] { background: var(--ink); color: var(--paper); }
+.btn.primary { background: var(--laterite-deep); border-color: var(--laterite-deep); color: var(--paper); }
+.btn[disabled] { opacity: .45; cursor: not-allowed; }
+.legend { display: grid; gap: 6px; padding-top: var(--s3); border-top: 1px solid var(--rule); }
+.legend-items { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.legend-items a, .legend-items span.li { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-data); font-size: 12px; color: var(--ink); text-decoration: none; }
+.legend-items a:hover { text-decoration: underline; }
+.sw { width: 14px; height: 14px; border: 1px solid var(--ink); flex: none; }
+.legend p { font-size: 14px; line-height: 1.45; color: var(--ink-muted); }
+
+.plate { position: relative; min-width: 0; border: 1px solid var(--ink); background: var(--paper) url(img/contour.svg) -80px -60px / 620px auto no-repeat; }
+.plate-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px var(--s3); padding: 8px 12px; border-bottom: 1px solid var(--rule); background: var(--paper); }
+.zone-banner { padding: 12px; border-bottom: 1px solid var(--rule); background: var(--paper-deep); display: grid; gap: 6px; }
+.zone-banner h2 { font-family: var(--font-display); font-weight: 600; font-size: 26px; line-height: 1.15; }
+.zone-banner p:not(.anno) { font-size: 16px; line-height: 1.45; max-width: 70ch; }
+.map-box { position: relative; }
+.map { display: block; width: 100%; height: auto; aspect-ratio: 972 / 800; touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: default; }
+.map.zoomed { touch-action: none; cursor: grab; }
+.map.dragging { cursor: grabbing; }
+.map .state { stroke: var(--paper); stroke-width: 1; vector-effect: non-scaling-stroke; cursor: pointer; pointer-events: all; transition: opacity .25s; outline: none; }
+.map[data-layer="relief"] .state { stroke: var(--ink); stroke-opacity: .55; stroke-width: .7; }
+.map[data-layer="rivers"] .state, .map[data-layer="density"] .state { stroke: var(--rule); stroke-width: .8; }
+.map .state.dim { stroke: var(--rule); stroke-width: .8; }
+.map .state.picked { stroke: var(--ink); stroke-width: 3; stroke-opacity: 1; }
+.map .lift { pointer-events: none; stroke: var(--ink); stroke-width: 1.5; vector-effect: non-scaling-stroke; filter: url(#liftshadow); transition: transform .18s ease-out; }
+.map .relief, .map .rivers, .map .m-rivers, .map .m-relief { display: none; pointer-events: none; }
+.map[data-layer="relief"] .relief, .map[data-layer="relief"] .rivers, .map[data-layer="relief"] .m-relief { display: block; }
+.map[data-layer="rivers"] .rivers, .map[data-layer="rivers"] .m-rivers { display: block; }
+.map .riv { fill: none; stroke: var(--river); stroke-width: 1.2; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; }
+.map .lake { fill: var(--river); stroke: none; }
+.map[data-layer="rivers"] .riv.major { stroke: var(--river-deep); stroke-width: 4.5; }
+.map[data-layer="relief"] .riv { stroke-width: .9; }
+.map .grat line { stroke: var(--rule); stroke-width: .5; vector-effect: non-scaling-stroke; stroke-dasharray: 2 4; }
+.map text { font-family: var(--font-data); pointer-events: none; }
+.map .grat text { fill: var(--ink-muted); font-size: 9px; }
+.map .lab { fill: var(--ink); font-weight: 500; text-anchor: middle; paint-order: stroke; stroke: var(--paper); stroke-opacity: .88; stroke-linejoin: round; letter-spacing: .02em; }
+.map .mk { fill: var(--ink); font-weight: 500; paint-order: stroke; stroke: var(--paper); stroke-opacity: .9; stroke-linejoin: round; }
+.map .mk.river-name { fill: var(--river-deep); font-style: italic; font-family: var(--font-display); letter-spacing: .12em; }
+.map .dot { fill: var(--laterite); stroke: var(--paper); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.map .peak { fill: var(--ink); }
+.zoom { position: absolute; right: 8px; bottom: 8px; display: flex; gap: 4px; }
+@media (min-width: 700px) { .zoom { flex-direction: column; right: 10px; bottom: 10px; } }
+.zoom button { width: 40px; height: 40px; border-radius: 999px; border: 1px solid var(--ink); background: var(--paper); cursor: pointer; font-family: var(--font-data); font-size: 18px; line-height: 1; }
+.zoom button:hover { background: var(--paper-deep); }
+.plate-foot { padding: 8px 12px; border-top: 1px solid var(--rule); background: var(--paper); display: grid; gap: 6px; }
+.plate-foot p { font-size: 14px; line-height: 1.45; color: var(--ink-muted); }
+.tray { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--ink); background: var(--paper-deep); }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid var(--ink); border-radius: 2px; background: var(--paper); font-size: 15px; }
+.chip button { border: 0; background: none; cursor: pointer; padding: 0 2px; font-size: 16px; line-height: 1; }
+#tooltip { position: fixed; z-index: 40; pointer-events: none; max-width: 260px; background: var(--paper); border: 1px solid var(--ink); box-shadow: var(--shadow-sheet); padding: 10px 12px; display: grid; gap: 2px; }
+#tooltip strong { font-family: var(--font-display); font-weight: 600; font-size: 20px; line-height: 1.15; }
+#tooltip em { font-family: var(--font-display); font-size: 15px; line-height: 1.3; }
+#tooltip span { font-family: var(--font-data); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-muted); line-height: 1.5; }
+
+.strip { border-block: 1px solid var(--ink); background: var(--paper-deep); }
+.strip-in { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--s4) var(--s5); padding-block: var(--s5); }
+.stat { display: grid; gap: var(--s1); align-content: start; min-width: 0; }
+.stat .fig { font-family: var(--font-data); font-weight: 500; font-size: clamp(24px, 3vw, 32px); line-height: 1.1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.stat p.note { font-size: 14px; line-height: 1.45; color: var(--ink-muted); }
+
+.block { padding-block: var(--s6); }
+.block-h { display: grid; gap: var(--s2); margin-bottom: var(--s5); max-width: 60ch; }
+.block-h h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(32px, 5vw, 56px); line-height: 1.05; letter-spacing: -.015em; text-wrap: balance; }
+.zones { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 0; border-top: 1px solid var(--ink); border-left: 1px solid var(--ink); }
+.zone-card { display: grid; grid-template-rows: auto auto 1fr auto; gap: var(--s2); padding: var(--s4); border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); text-decoration: none; color: var(--ink); background: var(--paper); min-width: 0; }
+.zone-card:hover { background: var(--paper-deep); color: var(--ink); }
+.zone-card .bar { height: 12px; margin: calc(var(--s4) * -1) calc(var(--s4) * -1) var(--s3); }
+.zone-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 30px; line-height: 1.1; }
+.zone-card p { font-size: 16px; line-height: 1.5; }
+.zone-card .go { font-family: var(--font-data); font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--laterite-deep); margin-top: var(--s2); }
+
+.index-tools { display: grid; gap: var(--s3); margin-bottom: var(--s4); max-width: 420px; }
+.index { columns: 300px 3; column-gap: var(--s5); }
+.index li { break-inside: avoid; border-bottom: 1px solid var(--rule); }
+.index a { display: grid; grid-template-columns: 12px minmax(0,1fr) auto; align-items: baseline; gap: 10px; padding: 9px 0; text-decoration: none; color: var(--ink); }
+.index a:hover .nm { text-decoration: underline; }
+.index .zd { width: 10px; height: 10px; border: 1px solid var(--ink); align-self: center; }
+.index .nm { font-family: var(--font-display); font-weight: 600; font-size: 19px; line-height: 1.2; }
+.index .cap { display: block; font-family: var(--font-body); font-weight: 400; font-size: 14px; color: var(--ink-muted); }
+.index .st { font-family: var(--font-data); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); white-space: nowrap; }
+.index .st.done { color: var(--palm); }
+.empty { color: var(--ink-muted); font-style: italic; }
+
+footer.foot { border-top: 1px solid var(--ink); padding-block: var(--s5) var(--s6); background: var(--paper-deep); }
+.foot-in { display: grid; gap: var(--s4); grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.foot h2 { font-family: var(--font-data); font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; margin-bottom: var(--s2); }
+.foot p, .foot li { font-size: 15px; line-height: 1.5; color: var(--ink); }
+.foot li { margin-bottom: 6px; }
+
+/* ---------- state page ---------- */
+.s-head { background: var(--zb); color: var(--zo); }
+.s-head a { color: var(--zo); }
+.s-head .anno { color: var(--zo); }
+.s-head :focus-visible { outline-color: var(--zo); }
+.s-head-in { display: grid; gap: var(--s4); padding-block: var(--s4) var(--s5); }
+.s-title { display: grid; gap: var(--s3); align-content: start; min-width: 0; }
+.s-title h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(52px, 12vw, 124px); line-height: .95; letter-spacing: -.025em; font-variation-settings: "opsz" 144; overflow-wrap: anywhere; text-wrap: balance; }
+.s-title .nick { font-family: var(--font-display); font-style: italic; font-size: clamp(22px, 4vw, 30px); line-height: 1.25; }
+.s-meta { display: flex; flex-wrap: wrap; gap: var(--s3) var(--s5); padding-top: var(--s3); border-top: 1px solid currentColor; }
+.s-meta dt { font-family: var(--font-data); font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; }
+.s-meta dd { font-family: var(--font-display); font-size: 22px; font-weight: 600; line-height: 1.2; }
+.s-hero { align-self: end; min-width: 0; }
+.s-hero img { width: 100%; height: auto; aspect-ratio: 1200 / 560; object-fit: cover; border: 1px solid var(--ink); background: var(--paper-deep); }
+.s-hero figcaption { font-size: 13px; line-height: 1.4; margin-top: 6px; display: flex; gap: 6px 12px; align-items: baseline; justify-content: space-between; flex-wrap: wrap; }
+.s-hero figcaption a { text-decoration: underline; text-underline-offset: 2px; }
+.s-hero .swap { flex: none; min-height: 32px; padding: 4px 10px; background: transparent; color: inherit; border: 1px solid currentColor; border-radius: 2px; cursor: pointer; font-family: var(--font-data); font-size: 11px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; }
+@media (min-width: 1000px) { .s-head-in { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--s5); align-items: end; } }
+.s-pattern { height: var(--s6); background-color: var(--paper-deep); background-size: 128px 128px; border-block: 1px solid var(--ink); }
+.s-pattern.contour { background: var(--paper-deep) url(img/contour.svg) center / 520px auto; }
+.pattern-note { padding-block: 8px 0; text-transform: none; letter-spacing: .02em; }
+.soon { margin-block: var(--s5) 0; padding: var(--s4); border: 1px solid var(--ink); background: var(--paper-deep); display: grid; gap: var(--s2); }
+.soon h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(28px, 4vw, 40px); line-height: 1.1; }
+.soon p { max-width: 65ch; }
+.sec { display: grid; gap: var(--s3); padding-block: var(--s5); border-bottom: 1px solid var(--rule); }
+.sec > header { display: grid; gap: var(--s1); align-content: start; }
+.sec > header h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(28px, 3.4vw, 36px); line-height: 1.1; letter-spacing: -.01em; color: var(--zt); text-wrap: balance; }
+.sec-body { min-width: 0; display: grid; gap: var(--s4); }
+@media (min-width: 1000px) { .sec { grid-template-columns: 260px minmax(0, 1fr); gap: var(--s5); } .sec > header { position: sticky; top: calc(var(--mast-h, env(safe-area-inset-top, 0px)) + 16px); align-self: start; } }
+.prose { max-width: 66ch; }
+.glance { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: var(--s4) var(--s5); }
+.glance .wide { grid-column: 1 / -1; }
+.towns { display: flex; flex-wrap: wrap; gap: 6px 8px; margin-top: 4px; }
+.towns li { font-family: var(--font-data); font-size: 13px; padding: 3px 8px; border: 1px solid var(--rule); border-radius: 2px; }
+.land { display: grid; gap: var(--s4); }
+@media (min-width: 760px) { .land { grid-template-columns: minmax(0, 1fr) minmax(260px, 380px); gap: var(--s5); } }
+.facts { display: grid; gap: var(--s3); }
+.facts dt { font-family: var(--font-data); font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); }
+.facts dd { max-width: 62ch; }
+.loc { border: 1px solid var(--ink); background: var(--paper); align-self: start; }
+.loc svg { display: block; width: 100%; height: auto; }
+.loc figcaption { padding: 8px 10px; border-top: 1px solid var(--rule); font-size: 13px; line-height: 1.45; color: var(--ink-muted); }
+.loc .inset { position: absolute; }
+.cols2 { display: grid; gap: var(--s4) var(--s5); grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.cols2 h3, .sub-h { font-family: var(--font-data); font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: var(--s2); }
+.plain li { padding: 7px 0; border-bottom: 1px solid var(--rule); line-height: 1.45; }
+.note-box { font-size: 16px; line-height: 1.5; padding: var(--s3); background: var(--paper-deep); border-left: 0; max-width: 70ch; }
+.spot { background: var(--indigo); color: var(--paper); padding: var(--s5) var(--s4); display: grid; gap: var(--s3); position: relative; overflow: hidden; }
+.spot::after { content: ""; position: absolute; inset: 0; background: url(img/contour.svg) right -140px top -120px / 640px auto no-repeat; opacity: .25; pointer-events: none; }
+.spot > * { position: relative; z-index: 1; }
+.spot .anno { color: var(--savanna); }
+.spot h3 { font-family: var(--font-display); font-weight: 600; font-size: clamp(40px, 7vw, 76px); line-height: 1; letter-spacing: -.02em; text-wrap: balance; font-variation-settings: "opsz" 144; }
+.spot .kicker { font-family: var(--font-display); font-style: italic; font-size: 22px; line-height: 1.3; color: var(--savanna); }
+.spot p.body { max-width: 62ch; font-size: 19px; line-height: 1.6; }
+@media (min-width: 760px) { .spot { padding: var(--s6) var(--s5); } }
+.menu { border-block: 3px double var(--ink); padding-block: var(--s3); display: grid; gap: var(--s4); max-width: 760px; }
+.menu h3 { font-family: var(--font-display); font-weight: 600; font-size: 24px; line-height: 1.2; display: flex; align-items: baseline; gap: 10px; }
+.menu h3::after { content: ""; flex: 1; border-bottom: 2px dotted var(--rule); transform: translateY(-5px); }
+.menu p { font-family: var(--font-display); font-style: italic; font-size: 18px; line-height: 1.5; color: var(--ink); max-width: 60ch; }
+.places { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: var(--s4) var(--s5); }
+.places h3 { font-family: var(--font-display); font-weight: 600; font-size: 21px; line-height: 1.2; margin-bottom: 4px; padding-top: var(--s2); border-top: 2px solid var(--ink); }
+.places p { font-size: 16px; line-height: 1.5; }
+.timeline { display: grid; gap: 0; border-left: 2px solid var(--ink); margin-left: 5px; max-width: 760px; }
+.timeline li { display: grid; gap: 2px var(--s4); padding: 0 0 var(--s4) var(--s4); position: relative; }
+.timeline li::before { content: ""; position: absolute; left: -7px; top: 7px; width: 12px; height: 12px; background: var(--zt); border: 2px solid var(--paper); border-radius: 999px; }
+.timeline .yr { font-family: var(--font-data); font-weight: 500; font-size: 15px; letter-spacing: .02em; color: var(--zt); font-variant-numeric: tabular-nums; }
+@media (min-width: 620px) { .timeline li { grid-template-columns: 130px minmax(0, 1fr); } }
+.figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: var(--s3) var(--s5); }
+.figures h3 { font-family: var(--font-display); font-weight: 600; font-size: 20px; line-height: 1.25; }
+.figures p { font-size: 16px; line-height: 1.5; color: var(--ink); }
+.dyk { display: grid; gap: var(--s3); max-width: 760px; }
+.dyk li { font-family: var(--font-display); font-size: clamp(19px, 2.4vw, 23px); line-height: 1.4; padding-left: var(--s4); position: relative; }
+.dyk li::before { content: ""; position: absolute; left: 0; top: .62em; width: 12px; height: 2px; background: var(--zt); }
+.nbrs { display: flex; flex-wrap: wrap; gap: 8px; }
+.nbr { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--ink); border-radius: 2px; text-decoration: none; color: var(--ink); font-family: var(--font-display); font-weight: 600; font-size: 18px; background: var(--paper); }
+.nbr:hover { background: var(--paper-deep); color: var(--ink); }
+.nbr i { width: 10px; height: 10px; border: 1px solid var(--ink); }
+.pn { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s3); }
+.pn a { display: grid; gap: 2px; padding: var(--s3); border: 1px solid var(--ink); text-decoration: none; color: var(--ink); min-width: 0; }
+.pn a:hover { background: var(--paper-deep); }
+.pn a.next { text-align: right; }
+.pn strong { font-family: var(--font-display); font-size: clamp(20px, 3vw, 26px); line-height: 1.15; overflow-wrap: anywhere; }
+.sources li { padding: 6px 0; border-bottom: 1px solid var(--rule); font-size: 16px; line-height: 1.45; overflow-wrap: anywhere; }
+
+/* ---------- compare ---------- */
+.cmp-head { padding-block: var(--s4) var(--s4); display: grid; gap: var(--s3); }
+.cmp-head h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(40px, 7vw, 72px); line-height: 1; letter-spacing: -.02em; }
+.cmp-pick { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s3); }
+.cmp-pick .field { min-width: 0; }
+select.input { appearance: auto; }
+.cmp { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); border-top: 1px solid var(--ink); margin-bottom: var(--s6); }
+.cmp .rowh { grid-column: 1 / -1; padding: var(--s4) 0 var(--s2); border-bottom: 2px solid var(--ink); font-family: var(--font-display); font-weight: 600; font-size: 28px; line-height: 1.1; }
+.cmp .lbl { grid-column: 1 / -1; padding: 10px 0 0; }
+.cmp .cell { padding: 4px var(--s3) 12px 0; border-bottom: 1px solid var(--rule); min-width: 0; font-size: 17px; line-height: 1.45; overflow-wrap: anywhere; }
+.cmp .cell + .cell { padding-left: var(--s3); padding-right: 0; border-left: 1px solid var(--rule); }
+.cmp .cell.num { font-family: var(--font-data); font-size: clamp(16px, 2.6vw, 22px); font-weight: 500; font-variant-numeric: tabular-nums; }
+.cmp .top { padding-block: var(--s3); display: grid; gap: 6px; align-content: start; }
+.cmp .top h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(26px, 5vw, 44px); line-height: 1.05; }
+.cmp .top svg { width: 100%; height: auto; max-height: 260px; }
+.cmp .cell small { display: block; font-family: var(--font-body); font-size: 13px; font-weight: 400; color: var(--ink-muted); line-height: 1.4; }
+@media (min-width: 900px) {
+  .cmp { grid-template-columns: 200px minmax(0,1fr) minmax(0,1fr); }
+  .cmp .lbl { grid-column: 1; padding: 12px var(--s3) 12px 0; border-bottom: 1px solid var(--rule); }
+  .cmp .cell { padding: 10px var(--s3) 12px var(--s3); border-left: 1px solid var(--rule); }
+  .cmp .top.sp { grid-column: 1; }
+}
+.cmp .top.sp { display: none; }
+@media (min-width: 900px) { .cmp .top.sp { display: block; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .enter { animation: none; }
+  .leaving, .map .lift, .map .state { transition: none; }
+}
+.timeline li:last-child { padding-bottom: 0; }
+
+</style>
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <div class="mast">
+      <a class="mast-name" href="#map">Thirty-Seven <span>An Atlas of Nigeria</span></a>
+      <nav aria-label="Atlas">
+        <a href="#map" data-nav="home">Map</a>
+        <a href="#list" data-nav="list">All states</a>
+        <a href="#compare" data-nav="compare">Compare</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+  <div id="view"><p class="wrap anno" style="padding-block:40px">Unrolling the map…</p></div>
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <h2>About this atlas</h2>
+      <p>Thirty-Seven is an atlas of Nigeria's 36 states and the Federal Capital Territory. All thirty-seven pages are written. Each one lists its sources.</p>
+    </div>
+    <div>
+      <h2>Map data</h2>
+      <ul>
+        <li>State boundaries: geoBoundaries, from GRID3 Nigeria state boundaries (2022), CC BY 4.0. Simplified for the web.</li>
+        <li>Rivers and lakes: Natural Earth, 1:10m, public domain.</li>
+        <li>Relief: ETOPO global relief model (NOAA), 20 arc-minute grid, interpolated and generalised.</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Figures and pictures</h2>
+      <ul>
+        <li>Nigeria's last census was in 2006. Population figures here are 2022 projections by the National Population Commission and National Bureau of Statistics, as tabulated by City Population.</li>
+        <li>Illustrations and textile patterns are original drawings. The patterns are inspired by textile and craft traditions and are decorative, not reproductions.</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div id="tooltip" role="status" hidden></div>
+<script>
+(() => {
+'use strict';
+/* Thirty-Seven: An Atlas of Nigeria. Layout code only: all content is in data/states.json,
+   boundaries in data/nigeria-states.geojson, rivers and relief in their own files. */
+
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const rich = s => esc(s);
+const num = n => n == null ? '—' : Math.round(n).toLocaleString('en-GB');
+const norm = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const wait = ms => new Promise(r => setTimeout(r, ms));
+const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* sticky masthead height, for scroll offsets (it wraps to two lines on narrow screens) */
+{ const head = $('.site-head'); const set = () => document.documentElement.style.setProperty('--mast-h', head.offsetHeight + 'px'); set(); new ResizeObserver(set).observe(head); }
+
+const ZONES = {
+  'north-west':    { name: 'North West',    tint: '#D9A441', band: '#D9A441', on: '#1A1714', text: '#80570B' },
+  'north-east':    { name: 'North East',    tint: '#B27A22', band: '#B27A22', on: '#1A1714', text: '#7A5210' },
+  'north-central': { name: 'North Central', tint: '#2F5D3A', band: '#2F5D3A', on: '#F5EFE3', text: '#2F5D3A' },
+  'south-west':    { name: 'South West',    tint: '#24305E', band: '#24305E', on: '#F5EFE3', text: '#24305E' },
+  'south-east':    { name: 'South East',    tint: '#B5462C', band: '#9C3A23', on: '#F5EFE3', text: '#9C3A23' },
+  'south-south':   { name: 'South South',   tint: '#3E7C8C', band: '#2F6473', on: '#F5EFE3', text: '#2F6473' }
+};
+const ZONE_ORDER = Object.keys(ZONES);
+const RELIEF = [[0, '#C9D6B8'], [100, '#DDE0BE'], [200, '#EBDDAE'], [300, '#E4C583'], [500, '#D3A15F'], [700, '#B97A45'], [1000, '#96552F'], [1400, '#6E3A22']];
+const DENSITY = [[0, '#E9D2B4'], [100, '#DDB088'], [200, '#CC8A63'], [300, '#B5623F'], [500, '#963F24'], [1000, '#6E2413']];
+const LAYERS = { zones: 'Geopolitical zones', relief: 'Relief', density: 'Population density', rivers: 'Rivers' };
+
+/* projection: equirectangular, scaled at 9° N */
+const LON0 = 2.5, LAT0 = 14.0, K = 80, C = Math.cos(9 * Math.PI / 180);
+const FULL = { x: 0, y: 0, w: 972, h: 800 };
+const px = lon => (lon - LON0) * C * K, py = lat => (LAT0 - lat) * K;
+const pt = ([x, y]) => px(x).toFixed(1) + ' ' + py(y).toFixed(1);
+const polyD = g => (g.type === 'Polygon' ? [g.coordinates] : g.type === 'MultiPolygon' ? g.coordinates : [])
+  .map(p => p.map(r => 'M' + r.map(pt).join('L') + 'Z').join('')).join('');
+const lineD = g => (g.type === 'LineString' ? [g.coordinates] : g.type === 'MultiLineString' ? g.coordinates : [])
+  .map(l => 'M' + l.map(pt).join('L')).join('');
+
+let DATA, STATES = [], BY = {}, RIV, REL, ALPHA = [];
+const ui = { layer: 'zones', taste: false, compare: false, picks: [], illus: false };
+let route = { type: 'home' }, prev = null, depth = 0, busy = false;
+const view = $('#view'), tip = $('#tooltip');
+
+/* ---------- load ---------- */
+const get = u => fetch(u).then(r => { if (!r.ok) throw new Error(u + ' ' + r.status); return r.json(); });
+Promise.all([get('data/states.json'), get('data/nigeria-states.geojson'), get('data/rivers.geojson'), get('data/relief.geojson')])
+  .then(([data, geo, riv, rel]) => {
+    DATA = data; RIV = riv; REL = rel;
+    const shapes = {}; geo.features.forEach(f => { shapes[f.properties.id] = f; });
+    STATES = data.states.filter(s => shapes[s.id]);
+    STATES.forEach(s => {
+      const f = shapes[s.id], b = f.properties.bbox, l = f.properties.label;
+      s.d = polyD(f.geometry);
+      s.box = [px(b[0]), py(b[3]), px(b[2]), py(b[1])];
+      s.lp = [px(l[0]), py(l[1])]; s.ll = l;
+      s.density = s.population && s.areaKm2 ? s.population.estimate / s.areaKm2 : null;
+      s.short = s.id === 'fct' ? 'FCT' : s.name;
+      BY[s.id] = s;
+    });
+    ALPHA = [...STATES].sort((a, b) => a.name.localeCompare(b.name));
+    RIV.paths = RIV.features.map(f => ({ lake: f.properties.kind === 'lake', major: !!f.properties.major, d: f.properties.kind === 'lake' ? polyD(f.geometry) : lineD(f.geometry) })).filter(r => r.d);
+    REL.paths = REL.features.map(f => ({ min: f.properties.min, d: polyD(f.geometry) }));
+    addEventListener('hashchange', onRoute);
+    onRoute();
+  })
+  .catch(err => {
+    view.innerHTML = `<div class="wrap" style="padding-block:64px"><p class="anno">Something went wrong</p><p class="prose">The atlas data did not load. Reload the page to try again.</p></div>`;
+    console.error(err);
+  });
+
+/* ---------- routing: plain-token hashes (state.lagos, zone.south-west, compare.lagos.kano, list) ---------- */
+function parse() {
+  const h = decodeURIComponent(location.hash.replace(/^#/, ''));
+  const p = h.split('.');
+  if (p[0] === 'state' && BY[p[1]]) return { type: 'state', id: p[1] };
+  if (p[0] === 'zone' && ZONES[p[1]]) return { type: 'home', zone: p[1] };
+  if (p[0] === 'compare') return { type: 'compare', a: BY[p[1]] ? p[1] : null, b: BY[p[2]] ? p[2] : null };
+  if (p[0] === 'list') return { type: 'home', list: true };
+  return { type: 'home' };
+}
+function onRoute() {
+  prev = route; route = parse(); depth++;
+  hideTip(); view.classList.remove('leaving');
+  $$('[data-nav]').forEach(a => {
+    const on = (a.dataset.nav === 'home' && route.type === 'home' && !route.list) || (a.dataset.nav === 'list' && route.list) || (a.dataset.nav === 'compare' && route.type === 'compare');
+    if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+  });
+  if (route.type === 'state') renderState(BY[route.id]);
+  else if (route.type === 'compare') renderCompare();
+  else renderHome();
+}
+const go = h => { if (location.hash === '#' + h) onRoute(); else location.hash = h; };
+
+/* ---------- shared SVG pieces ---------- */
+const reliefSVG = () => `<rect x="-50" y="-50" width="1100" height="900" fill="${RELIEF[0][1]}"/>` +
+  REL.paths.map(r => `<path d="${r.d}" fill="${(RELIEF.find(x => x[0] === r.min) || RELIEF[1])[1]}"/>`).join('');
+const riversSVG = () => RIV.paths.map(r => `<path class="${r.lake ? 'lake' : 'riv' + (r.major ? ' major' : '')}" d="${r.d}"/>`).join('');
+const dcol = d => { let c = DENSITY[0][1]; DENSITY.forEach(([m, col]) => { if (d >= m) c = col; }); return c; };
+const coord = ([lon, lat]) => `${Math.abs(lat).toFixed(1)}° ${lat >= 0 ? 'N' : 'S'}, ${Math.abs(lon).toFixed(1)}° ${lon >= 0 ? 'E' : 'W'}`;
+
+function boxToVB(box, pad = 1.4, aspect = FULL.w / FULL.h, limit = true) {
+  const bw = box[2] - box[0], bh = box[3] - box[1];
+  let w = Math.max(bw * pad, bh * pad * aspect);
+  if (limit) w = clamp(w, FULL.w / 10, FULL.w);
+  const h = w / aspect;
+  let x = (box[0] + box[2]) / 2 - w / 2, y = (box[1] + box[3]) / 2 - h / 2;
+  if (limit) { x = clamp(x, 0, FULL.w - w); y = clamp(y, 0, FULL.h - h); }
+  return { x, y, w, h };
+}
+const unionBox = list => list.reduce((b, s) => [Math.min(b[0], s.box[0]), Math.min(b[1], s.box[1]), Math.max(b[2], s.box[2]), Math.max(b[3], s.box[3])], [1e9, 1e9, -1e9, -1e9]);
+
+/* =====================================================================
+   HOME
+   ===================================================================== */
+let M = null; // live map controller
+
+function renderHome() {
+  document.title = 'Thirty-Seven: An Atlas of Nigeria';
+  const zone = route.zone ? ZONES[route.zone] : null;
+  const zinfo = route.zone ? DATA.zones.find(z => z.id === route.zone) : null;
+  const done = STATES.filter(s => s.status === 'complete').length;
+  view.innerHTML = `
+  <div class="wrap">
+    <section class="hero" aria-label="Map of Nigeria">
+      <div class="hero-text">
+        <p class="anno">36 states · 1 capital territory · 6 zones</p>
+        <h1>Thirty-<wbr>Seven</h1>
+        <p class="sub">An Atlas of Nigeria</p>
+        <p class="lede">Every state and the Federal Capital Territory, drawn from the land up. Choose a state on the map to open its page.</p>
+        <div class="field">
+          <label for="q">Find a state or capital</label>
+          <input class="input" id="q" type="search" autocomplete="off" placeholder="Try Calabar or Kano" role="combobox" aria-expanded="false" aria-controls="q-list" aria-autocomplete="list">
+          <ul class="suggest" id="q-list" role="listbox" aria-label="Matching states" hidden></ul>
+        </div>
+      </div>
+      <div class="hero-ctl">
+        <div>
+          <p class="group-label" id="layers-l">Map layer</p>
+          <div class="seg" role="radiogroup" aria-labelledby="layers-l" style="margin-top:6px">
+            ${Object.entries(LAYERS).map(([k, v]) => `<button class="btn" role="radio" id="layer-${k}" data-layer="${k}" aria-checked="${ui.layer === k}">${v}</button>`).join('')}
+          </div>
+        </div>
+        <div class="seg">
+          <button class="btn" id="taste" aria-pressed="${ui.taste}">Taste the map</button>
+          <button class="btn" id="cmp-toggle" aria-pressed="${ui.compare}">Compare two states</button>
+          <a class="btn" href="#list">List view</a>
+        </div>
+        <div class="legend" id="legend" aria-live="polite"></div>
+      </div>
+      <div class="plate" id="plate">
+        <div class="plate-head"><span class="anno" id="plate-title"></span><span class="anno">4°–14° N · 3°–15° E</span></div>
+        ${zone ? `<div class="zone-banner"><p class="anno">Showing one zone · ${STATES.filter(s => s.zone === route.zone).length} of 37</p><h2>${esc(zone.name)}</h2><p>${rich(zinfo.intro)}</p><p><a href="#map">Show all six zones</a></p></div>` : ''}
+        <div class="map-box">
+          ${mapSVG()}
+          <div class="zoom"><button id="zin" aria-label="Zoom in">+</button><button id="zout" aria-label="Zoom out">−</button><button id="zreset" aria-label="Reset the map">⌂</button></div>
+        </div>
+        <div class="tray" id="tray" hidden></div>
+        <div class="plate-foot"><p id="plate-note"></p></div>
+      </div>
+    </section>
+  </div>
+  <section class="strip" aria-label="Nigeria in figures">
+    <div class="wrap strip-in">
+      ${DATA.meta.national.map(n => `<div class="stat"><p class="anno">${esc(n.label)}</p><p class="fig">${esc(n.value)}</p><p class="note">${rich(n.note)}</p></div>`).join('')}
+    </div>
+  </section>
+  <section class="wrap block" aria-labelledby="zones-h">
+    <div class="block-h"><p class="anno">The six geopolitical zones</p><h2 id="zones-h">One country, six regions of the map</h2></div>
+    <div class="zones">
+      ${DATA.zones.map(z => { const zs = STATES.filter(s => s.zone === z.id); return `<a class="zone-card" href="#zone.${z.id}">
+        <div class="bar" style="background:${ZONES[z.id].tint}"></div>
+        <p class="anno">${zs.length} ${zs.some(s => s.id === 'fct') ? 'incl. the FCT' : 'states'}</p>
+        <h3>${esc(z.name)}</h3><p>${rich(z.intro)}</p>
+        <p class="go">Show on the map →</p></a>`; }).join('')}
+    </div>
+  </section>
+  <section class="wrap block" id="index" aria-labelledby="index-h" style="padding-top:0">
+    <div class="block-h"><p class="anno">Index · ${done} of 37 written</p><h2 id="index-h">All thirty-seven</h2></div>
+    <div class="index-tools field"><label for="f">Filter the list</label><input class="input" id="f" type="search" autocomplete="off" placeholder="State, capital or zone"></div>
+    <ul class="index" id="index-list"></ul>
+  </section>`;
+
+  M = initMap();
+  wireHome();
+  renderIndex('');
+
+  const target = route.zone ? boxToVB(unionBox(STATES.filter(s => s.zone === route.zone)), 1.15) : { ...FULL };
+  const cameFromState = prev && prev.type === 'state' && BY[prev.id];
+  if (cameFromState) {
+    scrollTo(0, 0);
+    M.setVB(boxToVB(BY[prev.id].box, 1.5));
+    M.animate(target, 750).then(() => M.focusState(prev.id, true));
+  } else {
+    M.setVB(target);
+    if (route.list) requestAnimationFrame(() => $('#index').scrollIntoView());
+    else if (route.zone && depth > 1) $('#plate').scrollIntoView({ block: 'nearest' });
+    else if (depth > 1 && prev && prev.type !== 'home') scrollTo(0, 0);
+    if (!cameFromState && depth === 1 && !reduced()) view.firstElementChild.classList.add('enter');
+  }
+}
+
+function mapSVG() {
+  const grat = [];
+  for (let lon = 4; lon <= 14; lon += 2) grat.push(`<line x1="${px(lon)}" y1="0" x2="${px(lon)}" y2="800"/><text class="gt" x="${px(lon) + 3}" y="792">${lon}° E</text>`);
+  for (let lat = 6; lat <= 12; lat += 2) grat.push(`<line x1="0" y1="${py(lat)}" x2="972" y2="${py(lat)}"/><text class="gt" x="4" y="${py(lat) - 4}">${lat}° N</text>`);
+  const c = RIV.confluence;
+  return `<svg id="map" class="map" viewBox="0 0 972 800" data-layer="${ui.layer}" role="group" aria-label="Map of Nigeria's 36 states and the Federal Capital Territory. Use the arrow keys to move between states and Enter to open one.">
+    <defs>
+      <clipPath id="nga">${STATES.map(s => `<path d="${s.d}"/>`).join('')}</clipPath>
+      <filter id="liftshadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#1A1714" flood-opacity=".38"/></filter>
+    </defs>
+    <g class="grat" aria-hidden="true">${grat.join('')}</g>
+    <g class="relief" clip-path="url(#nga)" aria-hidden="true">${reliefSVG()}</g>
+    <g class="states">${STATES.map(s => `<path class="state" data-id="${s.id}" d="${s.d}" tabindex="-1" role="link" aria-label="${esc(s.name)}${s.id === 'fct' ? '' : ' State'}, capital ${esc(s.capital)}, ${ZONES[s.zone].name}. ${s.status === 'complete' ? 'Open page.' : 'Page coming soon.'}"/>`).join('')}</g>
+    <g class="rivers" aria-hidden="true">${riversSVG()}</g>
+    <path class="lift" id="lift" d="" style="display:none" aria-hidden="true"/>
+    <g class="labels" aria-hidden="true">${STATES.map(s => `<text class="lab" data-id="${s.id}" x="${s.lp[0].toFixed(1)}" y="${s.lp[1].toFixed(1)}"></text>`).join('')}</g>
+    <g class="m-rivers" aria-hidden="true">
+      ${(RIV.labels || []).map(l => `<text class="mk river-name" x="${px(l.lon)}" y="${py(l.lat)}">${esc(l.name)}</text>`).join('')}
+      <circle class="dot" cx="${px(c.lon)}" cy="${py(c.lat)}" r="6"/>
+      <text class="mk conf" x="${px(c.lon)}" y="${py(c.lat)}" data-dx="10" data-dy="14">${esc(c.name)} · confluence</text>
+    </g>
+    <g class="m-relief" aria-hidden="true">
+      ${(REL.labels || []).map(l => `${l.peak ? `<path class="peak" data-peak d="M${px(l.lon)} ${py(l.lat) - 6}l6 10h-12z"/>` : ''}<text class="mk" x="${px(l.lon)}" y="${py(l.lat)}" ${l.peak ? 'data-dx="9" data-dy="4"' : 'text-anchor="middle"'}>${esc(l.name)}</text>`).join('')}
+    </g>
+  </svg>`;
+}
+
+function initMap() {
+  const svg = $('#map'), lift = $('#lift');
+  const paths = {}; $$('.state', svg).forEach(p => { paths[p.dataset.id] = p; });
+  const labels = {}; $$('.lab', svg).forEach(t => { labels[t.dataset.id] = t; });
+  let vb = { ...FULL }, current = null, raf = 0, labelKey = '';
+  const unit = () => vb.w / (svg.clientWidth || 800);
+
+  function setVB(v) {
+    const w = clamp(v.w, FULL.w / 10, FULL.w), h = w * FULL.h / FULL.w;
+    vb = { w, h, x: clamp(v.x, 0, FULL.w - w), y: clamp(v.y, 0, FULL.h - h) };
+    svg.setAttribute('viewBox', `${vb.x.toFixed(2)} ${vb.y.toFixed(2)} ${vb.w.toFixed(2)} ${vb.h.toFixed(2)}`);
+    svg.classList.toggle('zoomed', vb.w < FULL.w - 1);
+    sizeLabels();
+  }
+  function animate(to, ms) {
+    cancelAnimationFrame(raf);
+    if (reduced() || !ms) { setVB(to); return Promise.resolve(); }
+    const from = { ...vb }, t0 = performance.now();
+    return new Promise(res => {
+      const step = now => {
+        const t = clamp((now - t0) / ms, 0, 1), e = t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        setVB({ x: from.x + (to.x - from.x) * e, y: from.y + (to.y - from.y) * e, w: from.w + (to.w - from.w) * e });
+        if (t < 1) raf = requestAnimationFrame(step); else res();
+      };
+      raf = requestAnimationFrame(step);
+    });
+  }
+  function zoomAt(f, cx, cy) {
+    const r = svg.getBoundingClientRect();
+    const fx = cx == null ? .5 : (cx - r.left) / r.width, fy = cy == null ? .5 : (cy - r.top) / r.height;
+    const w = clamp(vb.w * f, FULL.w / 10, FULL.w), h = w * FULL.h / FULL.w;
+    return { x: vb.x + fx * vb.w - fx * w, y: vb.y + fy * vb.h - fy * h, w };
+  }
+
+  /* labels: constant size on screen; shown only where they fit inside the state */
+  const wrap2 = str => { const w = str.split(' '); if (w.length < 2) return [str]; let best = [str], bl = 1e9; for (let i = 1; i < w.length; i++) { const a = w.slice(0, i).join(' '), b = w.slice(i).join(' '); const m = Math.max(a.length, b.length); if (m < bl) { bl = m; best = [a, b]; } } return best; };
+  function fillLabels() {
+    const key = ui.taste ? 'taste' : 'name';
+    if (key === labelKey) return; labelKey = key;
+    STATES.forEach(s => {
+      const str = ui.taste ? (s.signatureDish || '') : s.short;
+      const t = labels[s.id];
+      t._one = str ? [str] : []; t._two = str ? wrap2(str) : [];
+    });
+  }
+  function sizeLabels() {
+    fillLabels();
+    const u = unit(), fs = 11 * u;
+    STATES.forEach(s => {
+      const t = labels[s.id], bw = (s.box[2] - s.box[0]) * .92, bh = (s.box[3] - s.box[1]) * .8;
+      const fits = lines => lines.length && Math.max(...lines.map(l => l.length)) * fs * .62 <= bw && lines.length * fs * 1.2 <= bh;
+      const lines = fits(t._one) ? t._one : fits(t._two) ? t._two : null;
+      if (!lines) { t.style.display = 'none'; return; }
+      t.style.display = '';
+      const sig = lines.join('|');
+      if (t._sig !== sig) { t._sig = sig; t.innerHTML = lines.map((l, i) => `<tspan x="${s.lp[0].toFixed(1)}" dy="${i === 0 ? (lines.length === 1 ? .35 : -.25) : 1.15}em">${esc(l)}</tspan>`).join(''); }
+      t.setAttribute('font-size', fs.toFixed(2)); t.setAttribute('stroke-width', (2.4 * u).toFixed(2));
+    });
+    $$('.mk', svg).forEach(t => {
+      const big = t.classList.contains('river-name');
+      t.setAttribute('font-size', ((big ? 17 : 11) * u).toFixed(2)); t.setAttribute('stroke-width', (3 * u).toFixed(2));
+      if (t.dataset.dx) { t.setAttribute('dx', (+t.dataset.dx * u).toFixed(2)); t.setAttribute('dy', (+t.dataset.dy * u).toFixed(2)); }
+    });
+    $$('.gt', svg).forEach(t => t.setAttribute('font-size', (10 * u).toFixed(2)));
+    const dot = $('.dot', svg); if (dot) dot.setAttribute('r', (6 * u).toFixed(2));
+  }
+
+  const fillFor = s => ui.layer === 'zones' ? ZONES[s.zone].tint : ui.layer === 'density' ? dcol(s.density) : ui.layer === 'rivers' ? '#EBE2D0' : 'transparent';
+  function paint() {
+    svg.dataset.layer = ui.layer;
+    STATES.forEach(s => {
+      const p = paths[s.id];
+      const dim = !!route.zone && s.zone !== route.zone;
+      p.style.fill = dim && ui.layer !== 'relief' ? '#EBE2D0' : fillFor(s);
+      p.classList.toggle('dim', dim);
+      p.classList.toggle('picked', ui.compare && ui.picks.includes(s.id));
+    });
+    labelKey = ''; sizeLabels();
+  }
+
+  /* hover and focus: lift a copy of the state above its neighbours */
+  function raise(s) {
+    const u = unit();
+    lift.setAttribute('d', s.d);
+    lift.style.fill = ui.layer === 'relief' ? 'rgba(245,239,227,.35)' : fillFor(s);
+    lift.style.display = ''; lift.style.transform = 'translate(0,0)';
+    lift.getBoundingClientRect();
+    lift.style.transform = `translate(${(-1.5 * u).toFixed(2)}px, ${(-4 * u).toFixed(2)}px)`;
+    current = s.id;
+  }
+  function lower() { lift.style.display = 'none'; current = null; hideTip(); }
+  function tipHTML(s) {
+    let extra = '';
+    if (ui.taste) extra = `<span>Signature dish: ${s.signatureDish ? esc(s.signatureDish) : 'to be added'}</span>`;
+    else if (ui.layer === 'density') extra = `<span>About ${num(s.density)} people per km² (${s.population.year} projection)</span>`;
+    return `<strong>${esc(s.name)}</strong><em>${esc(s.nickname || '')}</em><span>Capital: ${esc(s.capital)} · ${ZONES[s.zone].name}</span>${extra}${s.status !== 'complete' ? '<span>Page coming soon</span>' : ''}`;
+  }
+
+  function focusState(id, quiet) {
+    Object.values(paths).forEach(p => p.setAttribute('tabindex', '-1'));
+    const p = paths[id]; if (!p) return;
+    p.setAttribute('tabindex', '0');
+    if (!quiet) p.focus({ preventScroll: true });
+  }
+  focusState(STATES[0].id, true);
+
+  /* pointer: hover, pan, pinch */
+  const pts = new Map(); let drag = null, pinch = null, moved = false;
+  const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
+  svg.addEventListener('pointerdown', e => {
+    pts.set(e.pointerId, { x: e.clientX, y: e.clientY }); moved = false;
+    if (pts.size === 2) { const [a, b] = [...pts.values()]; pinch = { d: dist(a, b), vb: { ...vb }, cx: (a.x + b.x) / 2, cy: (a.y + b.y) / 2 }; drag = null; }
+    else drag = { x: e.clientX, y: e.clientY, vb: { ...vb } };
+  });
+  svg.addEventListener('pointermove', e => {
+    if (pts.has(e.pointerId)) {
+      pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      const r = svg.getBoundingClientRect();
+      if (pinch && pts.size === 2) {
+        const [a, b] = [...pts.values()], k = pinch.d / Math.max(dist(a, b), 1);
+        const w = clamp(pinch.vb.w * k, FULL.w / 10, FULL.w), h = w * FULL.h / FULL.w;
+        const fx = (pinch.cx - r.left) / r.width, fy = (pinch.cy - r.top) / r.height;
+        const mx = ((a.x + b.x) / 2 - r.left) / r.width, my = ((a.y + b.y) / 2 - r.top) / r.height;
+        setVB({ w, x: pinch.vb.x + fx * pinch.vb.w - mx * w, y: pinch.vb.y + fy * pinch.vb.h - my * h });
+        moved = true; lower(); return;
+      }
+      if (drag && vb.w < FULL.w - 1) {
+        const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+        if (Math.abs(dx) + Math.abs(dy) > 6) { moved = true; svg.classList.add('dragging'); lower(); }
+        if (moved) { const u = drag.vb.w / r.width; setVB({ w: drag.vb.w, x: drag.vb.x - dx * u, y: drag.vb.y - dy * u }); return; }
+      }
+    }
+    if (e.pointerType === 'touch' || busy) return;
+    const t = e.target.closest && e.target.closest('.state');
+    if (!t) { if (current) lower(); return; }
+    const s = BY[t.dataset.id];
+    if (current !== s.id) { raise(s); tip.innerHTML = tipHTML(s); tip.hidden = false; }
+    placeTip(e.clientX + 16, e.clientY + 18);
+  });
+  const up = e => { pts.delete(e.pointerId); if (pts.size < 2) pinch = null; if (!pts.size) { drag = null; svg.classList.remove('dragging'); } };
+  svg.addEventListener('pointerup', up); svg.addEventListener('pointercancel', up);
+  svg.addEventListener('pointerleave', e => { up(e); if (document.activeElement && document.activeElement.closest && document.activeElement.closest('#map')) return; lower(); });
+  svg.addEventListener('click', e => {
+    if (moved) { moved = false; return; }
+    const t = e.target.closest('.state'); if (t) activate(t.dataset.id);
+  });
+  svg.addEventListener('wheel', e => { if (!(e.ctrlKey || e.metaKey)) return; e.preventDefault(); setVB(zoomAt(e.deltaY > 0 ? 1.18 : 1 / 1.18, e.clientX, e.clientY)); }, { passive: false });
+
+  /* keyboard: one tab stop, arrows move to the nearest state in that direction */
+  svg.addEventListener('keydown', e => {
+    const t = e.target.closest('.state'); if (!t) return;
+    const s = BY[t.dataset.id];
+    const dir = { ArrowUp: [0, -1], ArrowDown: [0, 1], ArrowLeft: [-1, 0], ArrowRight: [1, 0] }[e.key];
+    if (dir) {
+      e.preventDefault();
+      let best = null, bd = 1e9;
+      STATES.forEach(c => {
+        if (c === s) return;
+        const dx = c.lp[0] - s.lp[0], dy = c.lp[1] - s.lp[1], along = dx * dir[0] + dy * dir[1], across = Math.abs(dx * dir[1] - dy * dir[0]);
+        if (along <= 0 || across > along * 1.6) return;
+        const d = along + across * 1.5; if (d < bd) { bd = d; best = c; }
+      });
+      if (best) focusState(best.id);
+    } else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(s.id); }
+    else if (e.key === '+' || e.key === '=') animate(zoomAt(1 / 1.5), 200);
+    else if (e.key === '-') animate(zoomAt(1.5), 200);
+  });
+  svg.addEventListener('focusin', e => {
+    const t = e.target.closest('.state'); if (!t) return;
+    const s = BY[t.dataset.id]; focusState(s.id, true); raise(s);
+    if (!t.matches(':focus-visible')) return;
+    tip.innerHTML = tipHTML(s); tip.hidden = false;
+    const r = t.getBoundingClientRect(); placeTip(r.left + r.width / 2 + 12, r.top + r.height / 2 + 12);
+  });
+  svg.addEventListener('focusout', () => lower());
+
+  let rt = 0; const onResize = () => { clearTimeout(rt); rt = setTimeout(() => { if (document.body.contains(svg)) sizeLabels(); else removeEventListener('resize', onResize); }, 120); };
+  addEventListener('resize', onResize);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => document.body.contains(svg) && sizeLabels());
+
+  return { svg, setVB, animate, zoomAt, paint, focusState, lower, get vb() { return vb; } };
+}
+
+function placeTip(x, y) {
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  tip.style.left = clamp(x, 8, innerWidth - w - 8) + 'px';
+  tip.style.top = (y + h > innerHeight - 8 ? y - h - 30 : y) + 'px';
+}
+function hideTip() { tip.hidden = true; }
+
+function activate(id) {
+  if (busy) return;
+  if (ui.compare) {
+    const i = ui.picks.indexOf(id);
+    if (i >= 0) ui.picks.splice(i, 1); else { if (ui.picks.length === 2) ui.picks.pop(); ui.picks.push(id); }
+    M.paint(); renderTray(); return;
+  }
+  openState(id);
+}
+async function openState(id) {
+  if (busy) return; busy = true; hideTip();
+  try {
+    if (M && document.body.contains(M.svg)) {
+      M.lower();
+      const r = M.svg.getBoundingClientRect();
+      if (r.top < -r.height * .5 || r.top > innerHeight * .8) M.svg.scrollIntoView({ block: 'center' });
+      await M.animate(boxToVB(BY[id].box, 1.5), 650);
+      if (!reduced()) { view.classList.add('leaving'); await wait(220); }
+    }
+  } finally { busy = false; }
+  go('state.' + id);
+}
+
+function renderLegend() {
+  const el = $('#legend'); if (!el) return;
+  const sw = (c, extra = '') => `<i class="sw" style="background:${c};${extra}"></i>`;
+  let h = '';
+  if (ui.layer === 'zones') h = `<p class="group-label">Zones</p><div class="legend-items">${ZONE_ORDER.map(z => `<a href="#zone.${z}">${sw(ZONES[z].tint)}${ZONES[z].name}</a>`).join('')}</div><p>Choose a zone to show only its states.</p>`;
+  else if (ui.layer === 'relief') h = `<p class="group-label">Height above sea level</p><div class="legend-items">${RELIEF.map(([m, c], i) => `<span class="li">${sw(c)}${i === 0 ? 'Below 100 m' : i === RELIEF.length - 1 ? num(m) + ' m and up' : num(m)}</span>`).join('')}</div><p>Generalised from a coarse global grid. It shows the broad shape of the land; small highlands such as Obudu are smoothed out.</p>`;
+  else if (ui.layer === 'density') h = `<p class="group-label">People per km²</p><div class="legend-items">${DENSITY.map(([m, c], i) => `<span class="li">${sw(c)}${i === 0 ? 'Under 100' : i === DENSITY.length - 1 ? num(m) + ' and over' : num(m) + '–' + num(DENSITY[i + 1][0])}</span>`).join('')}</div><p>Estimates only. 2022 projections by the National Population Commission and National Bureau of Statistics, divided by state area. The last census was in 2006.</p>`;
+  else h = `<p class="group-label">Rivers</p><div class="legend-items"><span class="li">${sw('#2F6473', 'height:5px;border:0;width:22px')}Niger and Benue</span><span class="li">${sw('#3E7C8C', 'height:2px;border:0;width:22px')}Other rivers and Kainji Lake</span><span class="li">${sw('#B5462C', 'border-radius:999px')}Lokoja</span></div><p>The Niger and the Benue meet at Lokoja in Kogi State, then run south as one river to the Delta.</p>`;
+  el.innerHTML = h;
+  $('#plate-title').textContent = LAYERS[ui.layer] + (ui.taste ? ' · signature dishes' : '');
+  const named = STATES.filter(s => s.signatureDish).length;
+  $('#plate-note').innerHTML = ui.taste
+    ? `Taste the map: each state is labelled with a signature dish. ${named < 37 ? named + ' of 37 are named so far; the rest will be added as their pages are written. ' : ''}Zoom in to read the small states.`
+    : `Hover or tap a state for its capital and nickname. Pinch, or use the buttons, to zoom. On a keyboard, tab to the map and use the arrow keys.`;
+  $$('[data-layer].btn').forEach(b => b.setAttribute('aria-checked', String(b.dataset.layer === ui.layer)));
+}
+function renderTray() {
+  const el = $('#tray'); if (!el) return;
+  el.hidden = !ui.compare;
+  if (!ui.compare) return;
+  el.innerHTML = `<span class="anno">Compare</span>${ui.picks.map(id => `<span class="chip">${esc(BY[id].name)}<button data-unpick="${id}" aria-label="Remove ${esc(BY[id].name)}">×</button></span>`).join('')}
+    ${ui.picks.length < 2 ? `<span style="font-size:15px">Choose ${ui.picks.length ? 'one more state' : 'two states'} on the map.</span>` : ''}
+    <button class="btn primary" id="cmp-go" ${ui.picks.length === 2 ? '' : 'disabled'}>Compare side by side</button>`;
+}
+function renderIndex(q) {
+  const n = norm(q.trim());
+  const rows = ALPHA.filter(s => !n || norm(s.name).includes(n) || norm(s.capital).includes(n) || norm(ZONES[s.zone].name).includes(n));
+  $('#index-list').innerHTML = rows.length ? rows.map(s => `<li><a href="#state.${s.id}"><i class="zd" style="background:${ZONES[s.zone].tint}" title="${ZONES[s.zone].name}"></i><span class="nm">${esc(s.name)}<span class="cap">${esc(s.capital)} · ${ZONES[s.zone].name}${ui.taste && s.signatureDish ? ' · ' + esc(s.signatureDish) : ''}</span></span><span class="st ${s.status === 'complete' ? 'done' : ''}">${s.status === 'complete' ? 'Written' : 'Coming soon'}</span></a></li>`).join('') : `<li class="empty">No state, capital or zone matches “${esc(q)}”.</li>`;
+}
+
+function wireHome() {
+  M.paint(); renderLegend(); renderTray();
+  $$('[data-layer].btn').forEach(b => b.addEventListener('click', () => { ui.layer = b.dataset.layer; M.paint(); renderLegend(); }));
+  $('.seg[role="radiogroup"]').addEventListener('keydown', e => {
+    const keys = Object.keys(LAYERS), i = keys.indexOf(ui.layer);
+    const j = e.key === 'ArrowRight' || e.key === 'ArrowDown' ? (i + 1) % keys.length : e.key === 'ArrowLeft' || e.key === 'ArrowUp' ? (i + keys.length - 1) % keys.length : -1;
+    if (j < 0) return; e.preventDefault(); ui.layer = keys[j]; M.paint(); renderLegend(); $('#layer-' + keys[j]).focus();
+  });
+  $('#taste').addEventListener('click', e => { ui.taste = !ui.taste; e.currentTarget.setAttribute('aria-pressed', String(ui.taste)); M.paint(); renderLegend(); renderIndex($('#f').value); });
+  $('#cmp-toggle').addEventListener('click', e => { ui.compare = !ui.compare; e.currentTarget.setAttribute('aria-pressed', String(ui.compare)); M.paint(); renderTray(); });
+  $('#tray').addEventListener('click', e => {
+    const u = e.target.closest('[data-unpick]');
+    if (u) { ui.picks = ui.picks.filter(x => x !== u.dataset.unpick); M.paint(); renderTray(); }
+    else if (e.target.closest('#cmp-go') && ui.picks.length === 2) go('compare.' + ui.picks.join('.'));
+  });
+  $('#zin').addEventListener('click', () => M.animate(M.zoomAt(1 / 1.6), 220));
+  $('#zout').addEventListener('click', () => M.animate(M.zoomAt(1.6), 220));
+  $('#zreset').addEventListener('click', () => M.animate({ ...FULL }, 300));
+  $('#f').addEventListener('input', e => renderIndex(e.target.value));
+
+  /* search combobox */
+  const q = $('#q'), list = $('#q-list'); let hits = [], active = -1;
+  const close = () => { list.hidden = true; q.setAttribute('aria-expanded', 'false'); q.removeAttribute('aria-activedescendant'); active = -1; };
+  const draw = () => {
+    if (!hits.length) { list.innerHTML = `<li class="empty" role="option" aria-disabled="true">No state or capital matches.</li>`; }
+    else list.innerHTML = hits.map((s, i) => `<li role="option" id="q-o${i}" data-id="${s.id}" aria-selected="${i === active}">${esc(s.name)}<span>${esc(s.capital)}</span></li>`).join('');
+    list.hidden = false; q.setAttribute('aria-expanded', 'true');
+    if (active >= 0) q.setAttribute('aria-activedescendant', 'q-o' + active); else q.removeAttribute('aria-activedescendant');
+  };
+  q.addEventListener('input', () => {
+    const n = norm(q.value.trim()); active = -1;
+    if (!n) return close();
+    hits = ALPHA.filter(s => norm(s.name).includes(n) || norm(s.capital).includes(n))
+      .sort((a, b) => (norm(b.name).startsWith(n) || norm(b.capital).startsWith(n)) - (norm(a.name).startsWith(n) || norm(a.capital).startsWith(n))).slice(0, 7);
+    draw();
+  });
+  q.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown' && hits.length) { e.preventDefault(); active = (active + 1) % hits.length; draw(); }
+    else if (e.key === 'ArrowUp' && hits.length) { e.preventDefault(); active = (active + hits.length - 1) % hits.length; draw(); }
+    else if (e.key === 'Enter') { const s = hits[Math.max(active, 0)]; if (s && !list.hidden) { e.preventDefault(); close(); q.value = s.name; openState(s.id); } }
+    else if (e.key === 'Escape') close();
+  });
+  list.addEventListener('pointerdown', e => { const li = e.target.closest('[data-id]'); if (!li) return; e.preventDefault(); close(); q.value = BY[li.dataset.id].name; openState(li.dataset.id); });
+  q.addEventListener('blur', () => setTimeout(close, 120));
+}
+
+/* =====================================================================
+   STATE PAGE: one template for every state
+   ===================================================================== */
+function locatorSVG(s, opt = {}) {
+  const v = boxToVB(s.box, opt.pad || 1.35, 4 / 3, false), u = v.w / 360;
+  const near = STATES.filter(o => o !== s && o.lp[0] > v.x + 8 * u && o.lp[0] < v.x + v.w - 8 * u && o.lp[1] > v.y + 10 * u && o.lp[1] < v.y + v.h - 6 * u);
+  return `<svg viewBox="${v.x.toFixed(1)} ${v.y.toFixed(1)} ${v.w.toFixed(1)} ${v.h.toFixed(1)}" role="img" aria-label="Relief map of ${esc(s.name)} with its rivers and neighbouring states.">
+    <defs><clipPath id="clip-${s.id}"><path d="${s.d}"/></clipPath></defs>
+    <rect x="${v.x}" y="${v.y}" width="${v.w}" height="${v.h}" fill="#F5EFE3"/>
+    ${STATES.filter(o => o !== s).map(o => `<path d="${o.d}" fill="#EBE2D0" stroke="#8F8371" stroke-width="1" vector-effect="non-scaling-stroke"/>`).join('')}
+    <g clip-path="url(#clip-${s.id})">${reliefSVG()}${RIV.paths.map(r => r.lake ? `<path d="${r.d}" fill="#3E7C8C"/>` : `<path d="${r.d}" fill="none" stroke="#2F6473" stroke-width="${r.major ? 3 : 1.5}" vector-effect="non-scaling-stroke"/>`).join('')}</g>
+    <path d="${s.d}" fill="none" stroke="#1A1714" stroke-width="2" vector-effect="non-scaling-stroke"/>
+    ${near.map(o => `<text x="${o.lp[0].toFixed(1)}" y="${o.lp[1].toFixed(1)}" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="${(9.5 * u).toFixed(2)}" fill="#5A5148" letter-spacing=".04em">${esc(o.short.toUpperCase())}</text>`).join('')}
+    <g transform="translate(${(v.x + 8 * u).toFixed(1)} ${(v.y + 8 * u).toFixed(1)}) scale(${(u * 0.095).toFixed(4)})"><rect x="-30" y="-30" width="1032" height="860" fill="#F5EFE3" stroke="#1A1714" stroke-width="10"/>${STATES.map(o => `<path d="${o.d}" fill="${o === s ? '#B5462C' : '#CFC3AC'}"/>`).join('')}</g>
+  </svg>`;
+}
+
+function renderState(s) {
+  const z = ZONES[s.zone], i = ALPHA.indexOf(s), p = ALPHA[(i + ALPHA.length - 1) % ALPHA.length], n = ALPHA[(i + 1) % ALPHA.length];
+  const full = s.status === 'complete';
+  const pat = s.textilePattern && DATA.meta.patterns[s.textilePattern];
+  document.title = `${s.name} · Thirty-Seven`;
+  const sec = (id, title, body, note) => `<section class="sec" id="${id}" aria-labelledby="${id}-h"><header>${note ? `<p class="anno">${note}</p>` : ''}<h2 id="${id}-h">${title}</h2></header><div class="sec-body">${body}</div></section>`;
+  const list = (arr, cls = 'plain') => `<ul class="${cls}">${arr.map(x => `<li>${rich(x)}</li>`).join('')}</ul>`;
+  const stat = (label, value, note) => `<div class="stat"><p class="anno">${label}</p><p class="fig">${value}</p>${note ? `<p class="note">${note}</p>` : ''}</div>`;
+  const pop = s.population;
+
+  const glance = `<div class="glance">
+      ${stat('Area', s.areaKm2 ? num(s.areaKm2) + ' km²' : '—')}
+      ${stat('Population (estimate)', pop ? num(pop.estimate) : '—', pop ? `${pop.year} projection. ${esc(pop.source)}.${pop.note ? ' ' + rich(pop.note) : ''}` : '')}
+      ${stat('Density (estimate)', s.density ? num(s.density) + ' per km²' : '—', 'Projection divided by area.')}
+      ${stat('Local government areas', s.lgaCount ?? '—', s.lgaCount ? '' : 'To be added.')}
+      ${s.majorTowns && s.majorTowns.length ? `<div class="stat wide"><p class="anno">Major towns</p><ul class="towns">${s.majorTowns.map(t => `<li>${esc(t)}</li>`).join('')}</ul></div>` : ''}
+    </div>`;
+  const locator = `<figure class="loc">${locatorSVG(s)}<figcaption>${esc(s.name)} in relief, with rivers. Inset: its place in Nigeria. Centre of the state near ${coord(s.ll)}. Relief is generalised.</figcaption></figure>`;
+  const land = full ? `<div class="land"><dl class="facts">
+        <div><dt>Terrain</dt><dd>${rich(s.terrain)}</dd></div>
+        <div><dt>Climate</dt><dd>${rich(s.climate)}</dd></div>
+        <div><dt>Vegetation</dt><dd>${rich(s.vegetation)}</dd></div>
+        <div><dt>Rivers and waters</dt><dd>${s.rivers.map(esc).join(' · ')}</dd></div>
+        ${s.highlands && s.highlands.length ? `<div><dt>Highlands</dt><dd>${s.highlands.map(esc).join(' · ')}</dd></div>` : ''}
+      </dl>${locator}</div>` : `<div class="land"><p class="prose empty">Terrain, climate and vegetation notes are still to be written. The map shows the state's broad relief and main rivers.</p>${locator}</div>`;
+  const nbrs = `<div><p class="sub-h">Shares a border with</p><div class="nbrs">${s.neighbours.map(id => BY[id]).filter(Boolean).map(o => `<a class="nbr" href="#state.${o.id}"><i style="background:${ZONES[o.zone].tint}"></i>${esc(o.name)}</a>`).join('') || '<span class="empty">No neighbouring states.</span>'}</div></div>
+    <nav class="pn" aria-label="Previous and next state"><a href="#state.${p.id}"><span class="anno">← Previous</span><strong>${esc(p.name)}</strong></a><a class="next" href="#state.${n.id}"><span class="anno">Next →</span><strong>${esc(n.name)}</strong></a></nav>`;
+  const sources = `<ul class="sources">${s.sources.map(x => `<li>${x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label)}</a>` : esc(x.label)}</li>`).join('')}</ul>`;
+
+  let body;
+  if (full) {
+    body = sec('glance', 'At a glance', glance, `${pop.year} estimates`)
+      + sec('land', 'Land and topography', land)
+      + sec('people', 'People and languages', `<div class="cols2"><div><h3>Peoples</h3>${list(s.peoples)}</div><div><h3>Languages</h3>${list(s.languages)}</div></div>
+          <p class="note-box">Like most Nigerian states, ${esc(s.name)} is multi-ethnic. The peoples and languages listed here are the largest or longest settled, not the only ones.</p>`)
+      + sec('spotlight', 'The one thing to know', `<div class="spot"><p class="anno">Worth celebrating</p><h3>${esc(s.spotlight.title)}</h3>${s.spotlight.kicker ? `<p class="kicker">${esc(s.spotlight.kicker)}</p>` : ''}<p class="body">${rich(s.spotlight.description)}</p></div>`)
+      + sec('food', 'Food', `<div class="menu">${s.foods.map(f => `<div><h3>${esc(f.name)}</h3><p>${rich(f.description)}</p></div>`).join('')}</div>`, 'On the table')
+      + sec('craft', 'Craft and dress', `<div class="cols2"><div><h3>Craft</h3>${list(s.crafts)}</div><div><h3>Dress</h3><p>${rich(s.attire)}</p></div></div>`)
+      + sec('places', 'Places to visit', `<div class="places">${s.places.map(x => `<div><h3>${esc(x.name)}</h3><p>${rich(x.description)}</p></div>`).join('')}</div>`)
+      + sec('history', 'History in brief', `<ol class="timeline">${s.history.map(x => `<li><span class="yr">${esc(x.year)}</span><span>${rich(x.event)}</span></li>`).join('')}</ol>`)
+      + sec('figures', 'Notable figures', `<div class="figures">${s.notableFigures.map(x => `<div><h3>${esc(x.name)}</h3><p>${rich(x.note)}</p></div>`).join('')}</div>`)
+      + sec('dyk', 'Did you know', list(s.didYouKnow, 'dyk'))
+      + sec('neighbours', 'Neighbours', nbrs)
+      + sec('sources', 'Sources', sources);
+  } else {
+    body = `<div class="soon"><p class="anno">Coming soon</p><h2>The ${esc(s.name)} page is still being written</h2>
+        <p>So far the atlas covers these states in full: ${STATES.filter(x => x.status === 'complete').map(x => `<a href="#state.${x.id}">${esc(x.name)}</a>`).join(', ')}. For ${esc(s.name)} you can already see the figures, the relief map and the neighbours below. People, food, craft, places and history will follow.</p></div>`
+      + sec('glance', 'At a glance', glance, `${pop.year} estimates`)
+      + sec('land', 'Land and topography', land)
+      + sec('neighbours', 'Neighbours', nbrs)
+      + sec('sources', 'Sources', sources);
+  }
+
+  view.innerHTML = `<article class="state${reduced() ? '' : ' enter'}" style="--zb:${z.band};--zo:${z.on};--zt:${z.text}">
+    <header class="s-head">
+      <div class="wrap s-head-in">
+        <div class="s-title">
+          <p class="anno"><a href="#map" data-back>← Back to the map</a></p>
+          <p class="anno">${esc(z.name)} · No. ${i + 1} of 37</p>
+          <h1>${esc(s.name)}</h1>
+          ${s.nickname ? `<p class="nick">${esc(s.nickname)}</p>` : ''}
+          <dl class="s-meta">
+            <div><dt>Capital</dt><dd>${esc(s.capital)}</dd></div>
+            <div><dt>Created</dt><dd>${s.yearCreated ?? 'To be added'}</dd></div>
+            <div><dt>Zone</dt><dd>${esc(z.name)}</dd></div>
+          </dl>
+          ${s.createdNote ? `<p style="font-size:15px;line-height:1.45">${rich(s.createdNote)}</p>` : ''}
+        </div>
+        ${s.heroPhoto || s.heroImage ? '<figure class="s-hero"></figure>' : ''}
+      </div>
+      <div class="s-pattern${pat ? '' : ' contour'}" ${pat ? `style="background-image:url(${esc(pat.file)})"` : ''} role="presentation"></div>
+    </header>
+    ${/* `<p class="wrap anno pattern-note">${pat ? 'Pattern: ' + esc(pat.caption) : 'Band: contour lines, illustrative only.'}</p>` */ ''}
+    <div class="wrap">${body}</div>
+  </article>`;
+  scrollTo(0, 0);
+  $('#main').focus({ preventScroll: true });
+  const back = $('[data-back]');
+  back.addEventListener('click', e => { if (prev && prev.type === 'home' && depth > 1) { e.preventDefault(); history.back(); } });
+  const fig = $('.s-hero');
+  if (fig) renderHero(fig, s);
+}
+
+/* hero: the photo by default, the original illustration one click away */
+function renderHero(fig, s) {
+  const photo = s.heroPhoto && (!ui.illus || !s.heroImage);
+  const src = photo ? s.heroPhoto : s.heroImage;
+  const alt = photo ? s.heroPhotoAlt : s.heroImageAlt;
+  const credit = photo ? `${esc(s.heroPhotoCredit || '')}${s.heroPhotoSource ? ` <a href="${esc(s.heroPhotoSource)}" target="_blank" rel="noopener">Source</a>` : ''}` : esc(s.heroImageCredit || '');
+  const pos = photo && s.heroPhotoPos ? ` style="object-position:${esc(s.heroPhotoPos)}"` : '';
+  const swap = s.heroPhoto && s.heroImage ? `<button type="button" class="swap">${photo ? 'Show illustration' : 'Show photo'}</button>` : '';
+  fig.innerHTML = `<img src="${esc(src)}" alt="${esc(alt || '')}" width="1200" height="560"${pos} decoding="async"><figcaption><span>${credit}</span>${swap}</figcaption>`;
+  const btn = fig.querySelector('.swap');
+  if (btn) btn.addEventListener('click', () => { ui.illus = !ui.illus; renderHero(fig, s); fig.querySelector('.swap').focus(); });
+}
+
+/* =====================================================================
+   COMPARE
+   ===================================================================== */
+function renderCompare() {
+  const a = BY[route.a || ui.picks[0] || 'lagos'], b = BY[route.b || ui.picks[1] || (a.id === 'kano' ? 'lagos' : 'kano')];
+  document.title = `${a.name} and ${b.name} · Thirty-Seven`;
+  const w = Math.max(a.box[2] - a.box[0], (a.box[3] - a.box[1]) * 4 / 3, b.box[2] - b.box[0], (b.box[3] - b.box[1]) * 4 / 3) * 1.12;
+  const shape = s => { const cx = (s.box[0] + s.box[2]) / 2, cy = (s.box[1] + s.box[3]) / 2; return `<svg viewBox="${(cx - w / 2).toFixed(1)} ${(cy - w * 3 / 8).toFixed(1)} ${w.toFixed(1)} ${(w * 3 / 4).toFixed(1)}" role="img" aria-label="Outline of ${esc(s.name)}"><path d="${s.d}" fill="${ZONES[s.zone].tint}" stroke="#1A1714" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg>`; };
+  const opts = sel => ALPHA.map(s => `<option value="${s.id}" ${s.id === sel ? 'selected' : ''}>${esc(s.name)}${s.status === 'complete' ? '' : ' (coming soon)'}</option>`).join('');
+  const soon = '<span class="empty">Coming soon</span>';
+  const row = (label, f, cls = '') => { const A = f(a), B = f(b); return `<p class="lbl anno">${label}</p><div class="cell ${cls}">${A || soon}</div><div class="cell ${cls}">${B || soon}</div>`; };
+  const ul = arr => arr && arr.length ? arr.map(rich).join('<br>') : '';
+  view.innerHTML = `<div class="wrap${reduced() ? '' : ' enter'}">
+    <div class="cmp-head">
+      <p class="anno"><a href="#map">← Back to the map</a></p>
+      <h1>Side by side</h1>
+      <p class="prose">Two states on the same page and drawn at the same scale. Change either one below, or choose them on the map with “Compare two states”.</p>
+      <div class="cmp-pick">
+        <div class="field"><label for="ca">First state</label><select class="input" id="ca">${opts(a.id)}</select></div>
+        <div class="field"><label for="cb">Second state</label><select class="input" id="cb">${opts(b.id)}</select></div>
+      </div>
+    </div>
+    <div class="cmp">
+      <div class="top sp"></div>
+      ${[a, b].map(s => `<div class="top cell">${shape(s)}<p class="anno" style="color:${ZONES[s.zone].text}">${ZONES[s.zone].name}</p><h2><a href="#state.${s.id}" style="color:inherit">${esc(s.name)}</a></h2><p style="font-family:var(--font-display);font-style:italic">${esc(s.nickname || '')}</p></div>`).join('')}
+      <h2 class="rowh">Figures</h2>
+      ${row('Capital', s => esc(s.capital))}
+      ${row('Created', s => s.yearCreated ? String(s.yearCreated) : '', 'num')}
+      ${row('Area', s => num(s.areaKm2) + ' km²', 'num')}
+      ${row('Population (estimate)', s => `${num(s.population.estimate)}<small>${s.population.year} projection, NPC / NBS</small>`, 'num')}
+      ${row('Density (estimate)', s => num(s.density) + ' per km²', 'num')}
+      ${row('Local government areas', s => s.lgaCount ? String(s.lgaCount) : '', 'num')}
+      <h2 class="rowh">Land</h2>
+      ${row('Terrain', s => s.terrain && rich(s.terrain))}
+      ${row('Climate', s => s.climate && rich(s.climate))}
+      ${row('Vegetation', s => s.vegetation && rich(s.vegetation))}
+      ${row('Rivers and waters', s => s.rivers.map(esc).join(' · '))}
+      <h2 class="rowh">Food</h2>
+      ${row('Signature dish', s => s.signatureDish ? `<strong>${esc(s.signatureDish)}</strong>` : '')}
+      ${row('On the table', s => s.foods.map(f => esc(f.name)).join(' · '))}
+      <h2 class="rowh">Culture</h2>
+      ${row('The one thing to know', s => s.spotlight ? `<strong>${esc(s.spotlight.title)}</strong>${s.spotlight.kicker ? `<small>${esc(s.spotlight.kicker)}</small>` : ''}` : '')}
+      ${row('Peoples', s => ul(s.peoples))}
+      ${row('Languages', s => s.languages.map(esc).join(' · '))}
+      ${row('Craft', s => ul(s.crafts))}
+      ${row('Dress', s => s.attire && rich(s.attire))}
+    </div>
+  </div>`;
+  const change = () => go(`compare.${$('#ca').value}.${$('#cb').value}`);
+  $('#ca').addEventListener('change', change); $('#cb').addEventListener('change', change);
+  if (!prev || prev.type !== 'compare') { scrollTo(0, 0); $('#main').focus({ preventScroll: true }); }
+}
+})();
+
+</script>
+
+</body></html>
